@@ -1,3 +1,21 @@
-let counter=require('./count');
+const events = require('events');
+const util = require('util');
 
-console.log(counter(["shaun","crystal"]))
+var Person = function(name){
+    this.name = name;
+};
+
+util.inherits(Person, events.EventEmitter);
+
+let james = new Person("James");
+let mery = new Person("Mery");
+let ryu = new Person("Ryu");
+let people = [james, mery, ryu];
+
+people.forEach(person =>{
+    person.on('speak', msg =>{
+        console.log(person.name + " said: " + msg);
+    });
+});
+
+james.emit('speak', 'hey dudes');
