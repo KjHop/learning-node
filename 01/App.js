@@ -1,9 +1,3 @@
-let time = 0;
+let counter=require('./count');
 
-let timer = setInterval(()=>{
-    time += 2;
-    console.log(time + " sec have passed");
-    if(time > 5){
-        clearInterval(timer);
-    }
-}, 2000)
+console.log(counter(["shaun","crystal"]))
