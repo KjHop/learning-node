@@ -1,0 +1,23 @@
+{
+  "name": "learning-node",
+  "version": "1.0.0",
+  "description": "just learning",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KjHop/learning-node.git"
+  },
+  "author": "KjHop",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KjHop/learning-node/issues"
+  },
+  "homepage": "https://github.com/KjHop/learning-node#readme"
+}
