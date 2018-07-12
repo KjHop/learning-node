@@ -1,1 +1,0 @@
-kiedys to bylo
