@@ -1,10 +1,10 @@
-const fs = require('fs');
-// Delete/create directiroies;
-fs.mkdir('stuff', ()=>{
-    fs.readFile('readMe.txt', 'utf8', (err, data)=>{
-        fs.writeFile('./stuff/writeMe.txt', data); //no callback just learning
-    });
+const http = require('http');
+
+const server = http.createServer((req, res)=>{
+    console.log('request was made: ' + req.url);
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end("Hey there");
 });
-fs.unlink('./stuff/writeMe.txt', ()=>{
-    fs.rmdir('stuff'); //requires callback function
-});
+
+server.listen(8080, '127.0.0.1');
+console.log("Listening...");
