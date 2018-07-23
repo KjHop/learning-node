@@ -14,7 +14,7 @@
                 letter-spacing: 2px;
                 text-align: center;
             }
-            p{
+            p, li{
                 font-size: 16px;
                 text-align: center;
             }
@@ -24,5 +24,10 @@
         <h1>Hello there <%= person%>!</h1>
         <p><strong>Age: </strong><%= data.age %></p>
         <p><strong>Job: </strong><%= data.job %></p>
+        <ul>
+            <% data.hobbies.forEach(hobby=>{ %>
+                <li><%= hobby %></li>
+            <% }) %>
+        </ul> 
     </body>
 </html>

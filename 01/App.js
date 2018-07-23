@@ -15,7 +15,8 @@ app.get('/contact', (req, res) =>{
 app.get('/profile/:id', (req, res) =>{
     let data = {
         age: 29,
-        job: 'junior js dev'
+        job: 'junior js dev',
+        hobbies: ['eating', 'fishing', 'gaming']
     }
     res.render('profile', {
         person: req.params.id,
