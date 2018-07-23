@@ -2,16 +2,25 @@ const express = require('express');
 
 const app = express();
 
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) =>{
-     res.send('Gitara siema');
+     res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/contact', (req, res) =>{
-    res.send('Gitara siema!');
+    res.sendFile(__dirname + '/contact.html');
 });
 
 app.get('/profile/:id', (req, res) =>{
-    res.send('You requested to see a profile with the id of ' + req.params.id);
+    let data = {
+        age: 29,
+        job: 'junior js dev'
+    }
+    res.render('profile', {
+        person: req.params.id,
+        data: data
+    });
 });
 
 app.listen(8080);
