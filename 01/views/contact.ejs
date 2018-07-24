@@ -7,7 +7,7 @@
         <% include partials/nav.ejs %>
         <h1>Hello there!</h1>
         <p>Contact page here</p>
-        <form id='contact-form'>
+        <form id='contact-form' method="POST" action="/contact">
             <label for='who'>Who do you want to contact?</label>
             <input type='text' name='who' value='<%= qs.person %>'>
             <label for='department'>Which department?</label>
